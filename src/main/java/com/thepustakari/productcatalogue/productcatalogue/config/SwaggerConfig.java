@@ -23,7 +23,6 @@ public class SwaggerConfig {
                 .build()
                 .apiInfo(metaData());
     }
-
     private ApiInfo metaData(){
         return new ApiInfoBuilder()
                 .title("The pustakari ")
@@ -34,4 +33,5 @@ public class SwaggerConfig {
                 .contact(new Contact("the pustakari","thepustakari.com","thepustakari@gmail.com"))
                 .build();
     }
+
 }

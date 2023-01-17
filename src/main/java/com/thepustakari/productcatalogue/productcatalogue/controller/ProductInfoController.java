@@ -10,7 +10,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/productInfo")
 public class ProductInfoController {
-
     @Autowired
     private ProductInfoService productInfoService;
 
@@ -18,7 +17,6 @@ public class ProductInfoController {
     public String welcome(){
         return "This is a welcome page!!";
     }
-
 
     @GetMapping("/allProducts")
     public List<ProductInformation> getAllProducts(){
@@ -29,13 +27,11 @@ public class ProductInfoController {
     public ProductInformation getProductById(@PathVariable Long id){
         return productInfoService.getProductById(id);
     }
-
     @PostMapping("/add")
     public String addProduct(@RequestBody ProductInformation productInformation){
         String response= productInfoService.addProducts(productInformation);
         return response;
     }
-
     @DeleteMapping("delete/{productId}")
     public String deleteProduct(@PathVariable Long productId){
         String response = productInfoService.deleteProduct(productId);
